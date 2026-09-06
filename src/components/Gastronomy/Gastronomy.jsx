@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Button } from '../Button/Button';
-import { images } from '../../constants/images';
+import styled from "styled-components";
+import { Button } from "../Button/Button";
+import { images } from "../../constants/images";
 
 const Section = styled.section`
   padding: 80px 5%;
@@ -80,10 +80,10 @@ const Thumb = styled.img`
 `;
 
 const thumbs = [
-  { src: images.burger, alt: 'Hambúrguer com batatas' },
-  { src: images.pizza, alt: 'Pizza com queijo derretido' },
-  { src: images.sushi, alt: 'Bowl de sushi' },
-  { src: images.milkshake, alt: 'Milkshake de chocolate' },
+  { src: images.burger, alt: "Hambúrguer com batatas" },
+  { src: images.pizza, alt: "Pizza com queijo derretido" },
+  { src: images.sushi, alt: "Bowl de sushi" },
+  { src: images.milkshake, alt: "Milkshake de chocolate" },
 ];
 
 export function Gastronomy() {
@@ -92,12 +92,16 @@ export function Gastronomy() {
       <Grid>
         <TextBlock>
           <Title>
-            Comida boa <span>é aqui.</span>
+            Conheça nossos <span>restaurantes.</span>
           </Title>
           <Description>
-            Hambúrgueres, porções, drinks, sucos, pizzas, sorvetes e muito
-            mais!
+            Conheça os restaurantes que fazem parte da nossa praça de
+            alimentação.
           </Description>
+          <h3>Conheça </h3>
+          {images.logos.map((src, index) => {
+            <img src={src} alt="Logo parceiro" />;
+          })}
           <Button href="#cardapio">Conheça nosso cardápio &gt;</Button>
         </TextBlock>
         <MainImage src={images.gastronomiaMain} alt="Prato especial" />
