@@ -80,10 +80,9 @@ const Thumb = styled.img`
 `;
 
 const thumbs = [
-  { src: images.burger, alt: "Hambúrguer com batatas" },
-  { src: images.pizza, alt: "Pizza com queijo derretido" },
-  { src: images.sushi, alt: "Bowl de sushi" },
-  { src: images.milkshake, alt: "Milkshake de chocolate" },
+  { src: images.burger, alt: "Incrivel Burger" },
+  { src: images.pizza, alt: "Cheff Madrid" },
+  { src: images.bar, alt: "Villa Bar" },
 ];
 
 export function Gastronomy() {
@@ -98,13 +97,8 @@ export function Gastronomy() {
             Conheça os restaurantes que fazem parte da nossa praça de
             alimentação.
           </Description>
-          <h3>Conheça </h3>
-          {images.logos.map((src, index) => {
-            <img src={src} alt="Logo parceiro" />;
-          })}
-          <Button href="#cardapio">Conheça nosso cardápio &gt;</Button>
         </TextBlock>
-        <MainImage src={images.gastronomiaMain} alt="Prato especial" />
+        <MainImage src={images.gastronomiaMain} alt="Imagem Villa" />
         <Thumbs>
           {thumbs.map(({ src, alt }) => (
             <Thumb key={alt} src={src} alt={alt} loading="lazy" />

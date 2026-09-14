@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import { HiMenu, HiX } from 'react-icons/hi';
+import { useState } from "react";
+import styled from "styled-components";
+import { HiMenu, HiX } from "react-icons/hi";
 
 const Nav = styled.header`
   position: fixed;
@@ -50,7 +50,7 @@ const Menu = styled.nav`
     transition: color 0.2s;
 
     &.active::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -79,7 +79,7 @@ const MenuToggle = styled.button`
 `;
 
 const MobileMenu = styled.nav`
-  display: ${({ $open }) => ($open ? 'flex' : 'none')};
+  display: ${({ $open }) => ($open ? "flex" : "none")};
   flex-direction: column;
   gap: 24px;
   position: fixed;
@@ -105,12 +105,11 @@ const MobileMenu = styled.nav`
 `;
 
 const links = [
-  { label: 'HOME', href: '#home' },
-  { label: 'SOBRE', href: '#sobre' },
-  { label: 'GASTRONOMIA', href: '#gastronomia' },
-  { label: 'AMBIENTE', href: '#ambiente' },
-  { label: 'EVENTOS', href: '#eventos' },
-  { label: 'CONTATO', href: '#contato' },
+  { label: "HOME", href: "#home" },
+  { label: "PARCEIROS", href: "#gastronomia" },
+  { label: "AMBIENTE", href: "#ambiente" },
+  { label: "EVENTOS", href: "#eventos" },
+  { label: "CONTATO", href: "#contato" },
 ];
 
 export function Header() {
@@ -129,7 +128,7 @@ export function Header() {
             <a
               key={label}
               href={href}
-              className={label === 'HOME' ? 'active' : ''}
+              className={label === "HOME" ? "active" : ""}
             >
               {label}
             </a>
@@ -137,7 +136,7 @@ export function Header() {
         </Menu>
         <MenuToggle
           onClick={() => setMenuOpen((prev) => !prev)}
-          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
         >
           {menuOpen ? <HiX /> : <HiMenu />}
         </MenuToggle>
@@ -147,7 +146,7 @@ export function Header() {
           <a
             key={label}
             href={href}
-            className={label === 'HOME' ? 'active' : ''}
+            className={label === "HOME" ? "active" : ""}
             onClick={() => setMenuOpen(false)}
           >
             {label}

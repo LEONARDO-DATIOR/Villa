@@ -6,9 +6,7 @@ import { Home } from "./components/Home/Home";
 import { Features } from "./components/Features/Features";
 import { Gastronomy } from "./components/Gastronomy/Gastronomy";
 import { Gallery } from "./components/Gallery/Gallery";
-import { DrinksBanner } from "./components/DrinksBanner/DrinksBanner";
 import { Footer } from "./components/Footer/Footer";
-import { Partners } from "./components/Partners/Partners";
 
 export default function App() {
   return (
@@ -20,7 +18,6 @@ export default function App() {
         <Features />
         <Gastronomy />
         <Gallery />
-        <DrinksBanner />
       </main>
       <Footer />
     </ThemeProvider>

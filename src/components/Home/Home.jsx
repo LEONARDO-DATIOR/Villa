@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { HiLocationMarker } from 'react-icons/hi';
-import { Button } from '../Button/Button';
-import { images } from '../../constants/images';
+import styled from "styled-components";
+import { HiLocationMarker } from "react-icons/hi";
+import { Button } from "../Button/Button";
+import { images } from "../../constants/images";
 
 const Section = styled.section`
   min-height: 100vh;
@@ -18,7 +18,7 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   font-weight: 700;
   line-height: 1.15;
   text-transform: uppercase;
@@ -47,14 +47,19 @@ export function Home() {
     <Section id="home">
       <Content>
         <Title>
-          A praça de alimentação mais aconchegante de <span>Belo Horizonte.</span>
+          A praça de alimentação mais aconchegante de{" "}
+          <span>Belo Horizonte.</span>
         </Title>
         <Divider />
         <Subtitle>
           Boa comida, bons drinks e bons momentos ao ar livre.
         </Subtitle>
-        <a href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwiQqeiA87SWAxUAAAAAHQAAAAAQDw..i&sca_esv=3083328332abd1ed&pvq=Cg0vZy8xMXpia3dkcTM4&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=br&sa=X&ftid=0xa69700231d2811:0x283d8197cc38f239" target="_blank" rel="noopener noreferrer">
-          <Button >
+        <a
+          href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwiQqeiA87SWAxUAAAAAHQAAAAAQDw..i&sca_esv=3083328332abd1ed&pvq=Cg0vZy8xMXpia3dkcTM4&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=br&sa=X&ftid=0xa69700231d2811:0x283d8197cc38f239"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button>
             <HiLocationMarker size={18} />
             Venha nos conhecer
           </Button>
