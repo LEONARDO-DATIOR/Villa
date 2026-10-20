@@ -12,24 +12,12 @@ const Nav = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 20px 5%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9)); */
+  background: #020100ed;
 `;
 
-const Logo = styled.a`
-  width: 80px;
-  height: 80px;
-  border: 3px double ${({ theme }) => theme.colors.orange};
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.orange};
-  box-shadow: 0 0 15px ${({ theme }) => theme.colors.orangeGlow};
-  line-height: 1.2;
-  flex-shrink: 0;
+const Logo = styled.img`
+  width: 150px;
 `;
 
 const Menu = styled.nav`
@@ -107,8 +95,8 @@ const MobileMenu = styled.nav`
 const links = [
   { label: "HOME", href: "#home" },
   { label: "PARCEIROS", href: "#gastronomia" },
-  { label: "AMBIENTE", href: "#ambiente" },
   { label: "EVENTOS", href: "#eventos" },
+  { label: "AMBIENTE", href: "#ambiente" },
   { label: "CONTATO", href: "#contato" },
 ];
 
@@ -118,11 +106,7 @@ export function Header() {
   return (
     <>
       <Nav>
-        <Logo href="#home">
-          VILLA
-          <br />
-          Olegário
-        </Logo>
+        <Logo src="/src/assets/logos/villa_logo.png" alt="Logo" />
         <Menu>
           {links.map(({ label, href }) => (
             <a
@@ -143,7 +127,7 @@ export function Header() {
       </Nav>
       <MobileMenu $open={menuOpen}>
         {links.map(({ label, href }) => (
-          <a
+          <a  
             key={label}
             href={href}
             className={label === "HOME" ? "active" : ""}
