@@ -52,7 +52,7 @@ const Grid = styled.div`
   }
 `;
 
-const EventCard = styled.article`
+const EventCard = styled.a`
   overflow: hidden;
   border: 1px solid rgba(255, 211, 91, 0.2);
   border-radius: ${({ theme }) => theme.radius.lg};
@@ -147,6 +147,7 @@ const EventDescription = styled.p`
 
 const events = [
   {
+    link: "https://www.instagram.com/p/DeHwJWeurcY/",
     title: "Encontro de carros antigos",
     type: "Encontro especial",
     description:
@@ -154,6 +155,7 @@ const events = [
     icon: FaCarSide,
   },
   {
+    link: "https://www.instagram.com/p/DdKboW4PMIG/",
     title: "Sertanejo na Villa",
     type: "Toda quarta-feira",
     description:
@@ -175,8 +177,8 @@ export function Eventos() {
           </Description>
         </Intro>
         <Grid>
-          {events.map(({ title, type, description, icon: Icon }) => (
-            <EventCard key={title}>
+          {events.map(({ link, title, type, description, icon: Icon }) => (
+            <EventCard key={title} href={link} target="_blank" rel="noopener noreferrer">
               <CardArtwork aria-hidden="true">
                 <EventIcon>
                   <Icon />
