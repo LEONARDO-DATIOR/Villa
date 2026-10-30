@@ -47,12 +47,12 @@ export function Home() {
     <Section id="home">
       <Content>
         <Title>
-          A praça de alimentação mais aconchegante de{" "}
-          <span>Belo Horizonte.</span>
+          O NOVO PONTO DE ENCONTRO E SABORES AO AR LIVRE.<br></br>
+          <span>BELO HORIZONTE.</span>
         </Title>
         <Divider />
         <Subtitle>
-          Boa comida, bons drinks e bons momentos ao ar livre.
+          Um espaço acolhedor feito de boas conversas, gastronomia e momentos únicos. Conheça a Villa e descubra as oportunidades de crescer junto com a gente.
         </Subtitle>
         <a
           href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwiQqeiA87SWAxUAAAAAHQAAAAAQDw..i&sca_esv=3083328332abd1ed&pvq=Cg0vZy8xMXpia3dkcTM4&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=br&sa=X&ftid=0xa69700231d2811:0x283d8197cc38f239"

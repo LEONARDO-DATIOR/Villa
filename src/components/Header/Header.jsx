@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { HiMenu, HiX } from "react-icons/hi";
 
@@ -102,17 +102,46 @@ const links = [
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const activationPoint = navRef.current?.getBoundingClientRect().height ?? 0;
+      const section = links.find(({ href }) => {
+        const target = document.getElementById(href.slice(1));
+
+        if (!target) {
+          return false;
+        }
+
+        const { top, bottom } = target.getBoundingClientRect();
+        return top <= activationPoint && bottom > activationPoint;
+      });
+
+      setActiveSection(section ? section.href.slice(1) : "");
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
 
   return (
     <>
-      <Nav>
+      <Nav ref={navRef}>
         <Logo src="/src/assets/logos/villa_logo.png" alt="Logo" />
         <Menu>
           {links.map(({ label, href }) => (
             <a
               key={label}
               href={href}
-              className={label === "HOME" ? "active" : ""}
+              className={activeSection === href.slice(1) ? "active" : ""}
             >
               {label}
             </a>
@@ -130,7 +159,7 @@ export function Header() {
           <a  
             key={label}
             href={href}
-            className={label === "HOME" ? "active" : ""}
+            className={activeSection === href.slice(1) ? "active" : ""}
             onClick={() => setMenuOpen(false)}
           >
             {label}

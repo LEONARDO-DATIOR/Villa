@@ -103,14 +103,14 @@ export function Footer() {
           <ColumnTitle>Onde estamos</ColumnTitle>
           <ColumnText>
             <HiLocationMarker size={16} />
-            Rua Olegário Maciel, 123, Centro – Olegário/MG
+            Rua Olegário Maciel, 1340, Santo Agostinho – Belo Horizonte/MG
           </ColumnText>
         </div>
         <div>
           <ColumnTitle>Horário de funcionamento</ColumnTitle>
           <ColumnText>
             <HiClock size={16} />
-            Todos os dias, 10h às 23h
+            Terça-feira a domingo, 10h às 00h
           </ColumnText>
         </div>
         <div>
@@ -119,17 +119,17 @@ export function Footer() {
             <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
               <FaInstagram />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+            {/* <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
               <FaFacebook />
             </a>
             <a href="https://wa.me" target="_blank" rel="noreferrer" aria-label="WhatsApp">
               <FaWhatsapp />
-            </a>
+            </a> */}
           </SocialLinks>
         </div>
       </Columns>
       <Copyright>
-        © 2024 Villa Olegário – Todos os direitos reservados.
+        © 2026 Villa Olegário – Todos os direitos reservados.
       </Copyright>
     </FooterWrapper>
   );

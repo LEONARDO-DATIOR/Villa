@@ -91,11 +91,10 @@ export function Gastronomy() {
       <Grid>
         <TextBlock>
           <Title>
-            Conheça nossos <span>restaurantes.</span>
+            <span>OPERAÇÕES</span> QUE FAZEM A <span>VILLA</span> ACONTECER. 
           </Title>
           <Description>
-            Conheça os restaurantes que fazem parte da nossa praça de
-            alimentação.
+            Dos hambúrgueres artesanais às pizzas e bebidas, conheça os conceitos que já dão sabor ao nosso espaço — e descubra como integrar a sua marca neste ecossistema.   
           </Description>
         </TextBlock>
         <MainImage src={images.gastronomiaMain} alt="Imagem Villa" />
