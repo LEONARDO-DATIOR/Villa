@@ -135,7 +135,7 @@ export function Header() {
   return (
     <>
       <Nav ref={navRef}>
-        <Logo src="/public/assets/logos/villa_logo.png" alt="Logo" />
+        <Logo src="/assets/logos/villa_logo.png" alt="Logo" />
         <Menu>
           {links.map(({ label, href }) => (
             <a
