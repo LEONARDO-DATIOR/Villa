@@ -116,9 +116,10 @@ const altTexts = [
 
 const captions = [
   "Uma noite para lembrar",
-  "Conexões à mesa",
+  "Fundo com mesas ao ar livre",
   "Seu lugar no Villa",
-  "Sabores que acompanham",
+  "Atendimento de qualidade",
+  "Nosso bar em construção"
 ];
 
 export function Gallery() {
